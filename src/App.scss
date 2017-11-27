@@ -1,5 +1,38 @@
-body {
-  margin: 0;
+$blue-primary: #33ACFF;
+$yellow: #DEF83B;
+
+.container-fluid.stretch {
   padding: 0;
-  font-family: sans-serif;
+}
+
+.row {
+
+  .logo {
+    background-color: $blue-primary;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    line-height: 70px;
+  }
+
+  .nav {
+    height: 70px;
+    background-color: $blue-primary;
+    li {
+      width: 20%;
+      a {
+        text-align: center;
+        font-size: 1.4rem;
+        height: calc(100% - 2px);
+        line-height: 50px;
+        opacity: 0.6;
+        color: white;
+        transition: opacity 200ms ease-in-out;
+        &:hover,&.active {
+          border-bottom: 2px solid $yellow;
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
