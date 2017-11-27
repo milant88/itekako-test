@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render() {
@@ -8,13 +9,13 @@ class Header extends Component {
                 <div className="col-md-10">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
-                            <a className="nav-link active" href="#">List</a>
+                            <Link to='/' className="nav-link active" href="#">List</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Grid</a>
+                            <Link to='/grid' className="nav-link" href="#">Grid</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Map</a>
+                            <Link to='/map' className="nav-link" href="#">Map</Link>
                         </li>
                     </ul>
                 </div>
