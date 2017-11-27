@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import MapContainer from '../parts/MapContainer';
 
 class Map extends Component {
+
     render() {
         return (
-            <div className="row no-gutters">
-                
-            </div>
+            <MapContainer {...this.props}/>
         )
     }
 }
