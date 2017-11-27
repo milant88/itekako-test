@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
+
     render() {
         return (
             <div className="row no-gutters">
@@ -9,7 +10,7 @@ class Header extends Component {
                 <div className="col-md-10">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
-                            <Link to='/' className="nav-link active" href="#">List</Link>
+                            <Link to='/' className="nav-link" href="#">List</Link>
                         </li>
                         <li className="nav-item">
                             <Link to='/grid' className="nav-link" href="#">Grid</Link>
