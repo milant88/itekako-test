@@ -26,7 +26,7 @@ class Header extends Component {
                             {this._renderLink('Map', '/map')}
                         </li>
                     </ul>
-                </div>s
+                </div>
             </div>
         )
     }
