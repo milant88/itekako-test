@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            active: 'List'
+        }
+    }
 
     render() {
         return (
@@ -10,19 +17,35 @@ class Header extends Component {
                 <div className="col-md-10">
                     <ul className="nav justify-content-center">
                         <li className="nav-item">
-                            <Link to='/' className="nav-link" href="#">List</Link>
+                            {this._renderLink('List', '/')}
                         </li>
                         <li className="nav-item">
-                            <Link to='/grid' className="nav-link" href="#">Grid</Link>
+                            {this._renderLink('Grid', '/grid')}
                         </li>
                         <li className="nav-item">
-                            <Link to='/map' className="nav-link" href="#">Map</Link>
+                            {this._renderLink('Map', '/map')}
                         </li>
                     </ul>
-                </div>
+                </div>s
             </div>
         )
     }
+
+    _setActiveLink = (event) => {
+        console.log(event.target.id);
+        this.setState({
+            active: event.target.id
+        })
+
+    };
+
+    _renderLink = (value, route) => {
+        if(this.state.active === value) {
+            return <Link id={value} to={route} onClick={this._setActiveLink} className="nav-link active" href="#">{value}</Link>
+        } else {
+            return   <Link id={value} to={route} onClick={this._setActiveLink} className="nav-link" href="#">{value}</Link>
+        }
+    };
 }
 
 export default Header;
